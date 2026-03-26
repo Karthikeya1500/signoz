@@ -126,7 +126,7 @@ export default function ServiceTopLevelOperations(): JSX.Element {
 						title={(): string => 'Top Level Operations'}
 						// @ts-ignore
 						dataSource={topLevelOperations}
-						rowKey={(record) => record}
+						rowKey={(record, index) => `${record}-${index}`}
 						loading={isLoading}
 						showHeader={false}
 						pagination={{
